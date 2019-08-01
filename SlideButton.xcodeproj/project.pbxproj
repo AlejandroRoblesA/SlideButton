@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A98477EC22E67D9F00AD674F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98477EB22E67D9F00AD674F /* AppDelegate.swift */; };
+		A98477EE22E67D9F00AD674F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98477ED22E67D9F00AD674F /* ViewController.swift */; };
+		A98477F122E67D9F00AD674F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98477EF22E67D9F00AD674F /* Main.storyboard */; };
+		A98477F322E67DAB00AD674F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A98477F222E67DAB00AD674F /* Assets.xcassets */; };
+		A98477F622E67DAB00AD674F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A98477F422E67DAB00AD674F /* LaunchScreen.storyboard */; };
+		A984780122E67DAB00AD674F /* SlideButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A984780022E67DAB00AD674F /* SlideButtonTests.swift */; };
+		A984780C22E67DAB00AD674F /* SlideButtonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A984780B22E67DAB00AD674F /* SlideButtonUITests.swift */; };
+		A99EFA9A22E77EF100647B1D /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99EFA9922E77EF100647B1D /* Test.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A98477FD22E67DAB00AD674F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98477E022E67D9F00AD674F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A98477E722E67D9F00AD674F;
+			remoteInfo = SlideButton;
+		};
+		A984780822E67DAB00AD674F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98477E022E67D9F00AD674F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A98477E722E67D9F00AD674F;
+			remoteInfo = SlideButton;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A98477E822E67D9F00AD674F /* SlideButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98477EB22E67D9F00AD674F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A98477ED22E67D9F00AD674F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A98477F022E67D9F00AD674F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A98477F222E67DAB00AD674F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A98477F522E67DAB00AD674F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A98477F722E67DAB00AD674F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A98477FC22E67DAB00AD674F /* SlideButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A984780022E67DAB00AD674F /* SlideButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideButtonTests.swift; sourceTree = "<group>"; };
+		A984780222E67DAB00AD674F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A984780722E67DAB00AD674F /* SlideButtonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideButtonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A984780B22E67DAB00AD674F /* SlideButtonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideButtonUITests.swift; sourceTree = "<group>"; };
+		A984780D22E67DAB00AD674F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99EFA9922E77EF100647B1D /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A98477E522E67D9F00AD674F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98477F922E67DAB00AD674F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A984780422E67DAB00AD674F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A98477DF22E67D9F00AD674F = {
+			isa = PBXGroup;
+			children = (
+				A98477EA22E67D9F00AD674F /* SlideButton */,
+				A98477FF22E67DAB00AD674F /* SlideButtonTests */,
+				A984780A22E67DAB00AD674F /* SlideButtonUITests */,
+				A98477E922E67D9F00AD674F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A98477E922E67D9F00AD674F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A98477E822E67D9F00AD674F /* SlideButton.app */,
+				A98477FC22E67DAB00AD674F /* SlideButtonTests.xctest */,
+				A984780722E67DAB00AD674F /* SlideButtonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A98477EA22E67D9F00AD674F /* SlideButton */ = {
+			isa = PBXGroup;
+			children = (
+				A98477EB22E67D9F00AD674F /* AppDelegate.swift */,
+				A98477ED22E67D9F00AD674F /* ViewController.swift */,
+				A99EFA9922E77EF100647B1D /* Test.swift */,
+				A98477EF22E67D9F00AD674F /* Main.storyboard */,
+				A98477F222E67DAB00AD674F /* Assets.xcassets */,
+				A98477F422E67DAB00AD674F /* LaunchScreen.storyboard */,
+				A98477F722E67DAB00AD674F /* Info.plist */,
+			);
+			path = SlideButton;
+			sourceTree = "<group>";
+		};
+		A98477FF22E67DAB00AD674F /* SlideButtonTests */ = {
+			isa = PBXGroup;
+			children = (
+				A984780022E67DAB00AD674F /* SlideButtonTests.swift */,
+				A984780222E67DAB00AD674F /* Info.plist */,
+			);
+			path = SlideButtonTests;
+			sourceTree = "<group>";
+		};
+		A984780A22E67DAB00AD674F /* SlideButtonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A984780B22E67DAB00AD674F /* SlideButtonUITests.swift */,
+				A984780D22E67DAB00AD674F /* Info.plist */,
+			);
+			path = SlideButtonUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A98477E722E67D9F00AD674F /* SlideButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A984781022E67DAB00AD674F /* Build configuration list for PBXNativeTarget "SlideButton" */;
+			buildPhases = (
+				A98477E422E67D9F00AD674F /* Sources */,
+				A98477E522E67D9F00AD674F /* Frameworks */,
+				A98477E622E67D9F00AD674F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SlideButton;
+			productName = SlideButton;
+			productReference = A98477E822E67D9F00AD674F /* SlideButton.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A98477FB22E67DAB00AD674F /* SlideButtonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A984781322E67DAB00AD674F /* Build configuration list for PBXNativeTarget "SlideButtonTests" */;
+			buildPhases = (
+				A98477F822E67DAB00AD674F /* Sources */,
+				A98477F922E67DAB00AD674F /* Frameworks */,
+				A98477FA22E67DAB00AD674F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A98477FE22E67DAB00AD674F /* PBXTargetDependency */,
+			);
+			name = SlideButtonTests;
+			productName = SlideButtonTests;
+			productReference = A98477FC22E67DAB00AD674F /* SlideButtonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A984780622E67DAB00AD674F /* SlideButtonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A984781622E67DAB00AD674F /* Build configuration list for PBXNativeTarget "SlideButtonUITests" */;
+			buildPhases = (
+				A984780322E67DAB00AD674F /* Sources */,
+				A984780422E67DAB00AD674F /* Frameworks */,
+				A984780522E67DAB00AD674F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A984780922E67DAB00AD674F /* PBXTargetDependency */,
+			);
+			name = SlideButtonUITests;
+			productName = SlideButtonUITests;
+			productReference = A984780722E67DAB00AD674F /* SlideButtonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A98477E022E67D9F00AD674F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Alejandro;
+				TargetAttributes = {
+					A98477E722E67D9F00AD674F = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					A98477FB22E67DAB00AD674F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = A98477E722E67D9F00AD674F;
+					};
+					A984780622E67DAB00AD674F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = A98477E722E67D9F00AD674F;
+					};
+				};
+			};
+			buildConfigurationList = A98477E322E67D9F00AD674F /* Build configuration list for PBXProject "SlideButton" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A98477DF22E67D9F00AD674F;
+			productRefGroup = A98477E922E67D9F00AD674F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A98477E722E67D9F00AD674F /* SlideButton */,
+				A98477FB22E67DAB00AD674F /* SlideButtonTests */,
+				A984780622E67DAB00AD674F /* SlideButtonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A98477E622E67D9F00AD674F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98477F622E67DAB00AD674F /* LaunchScreen.storyboard in Resources */,
+				A98477F322E67DAB00AD674F /* Assets.xcassets in Resources */,
+				A98477F122E67D9F00AD674F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98477FA22E67DAB00AD674F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A984780522E67DAB00AD674F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A98477E422E67D9F00AD674F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98477EE22E67D9F00AD674F /* ViewController.swift in Sources */,
+				A98477EC22E67D9F00AD674F /* AppDelegate.swift in Sources */,
+				A99EFA9A22E77EF100647B1D /* Test.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98477F822E67DAB00AD674F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A984780122E67DAB00AD674F /* SlideButtonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A984780322E67DAB00AD674F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A984780C22E67DAB00AD674F /* SlideButtonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A98477FE22E67DAB00AD674F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A98477E722E67D9F00AD674F /* SlideButton */;
+			targetProxy = A98477FD22E67DAB00AD674F /* PBXContainerItemProxy */;
+		};
+		A984780922E67DAB00AD674F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A98477E722E67D9F00AD674F /* SlideButton */;
+			targetProxy = A984780822E67DAB00AD674F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A98477EF22E67D9F00AD674F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A98477F022E67D9F00AD674F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A98477F422E67DAB00AD674F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A98477F522E67DAB00AD674F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A984780E22E67DAB00AD674F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A984780F22E67DAB00AD674F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A984781122E67DAB00AD674F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SlideButton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alejandro.SlideButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A984781222E67DAB00AD674F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SlideButton/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alejandro.SlideButton;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A984781422E67DAB00AD674F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SlideButtonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alejandro.SlideButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlideButton.app/SlideButton";
+			};
+			name = Debug;
+		};
+		A984781522E67DAB00AD674F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SlideButtonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alejandro.SlideButtonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SlideButton.app/SlideButton";
+			};
+			name = Release;
+		};
+		A984781722E67DAB00AD674F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SlideButtonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alejandro.SlideButtonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SlideButton;
+			};
+			name = Debug;
+		};
+		A984781822E67DAB00AD674F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SlideButtonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alejandro.SlideButtonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SlideButton;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A98477E322E67D9F00AD674F /* Build configuration list for PBXProject "SlideButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A984780E22E67DAB00AD674F /* Debug */,
+				A984780F22E67DAB00AD674F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A984781022E67DAB00AD674F /* Build configuration list for PBXNativeTarget "SlideButton" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A984781122E67DAB00AD674F /* Debug */,
+				A984781222E67DAB00AD674F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A984781322E67DAB00AD674F /* Build configuration list for PBXNativeTarget "SlideButtonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A984781422E67DAB00AD674F /* Debug */,
+				A984781522E67DAB00AD674F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A984781622E67DAB00AD674F /* Build configuration list for PBXNativeTarget "SlideButtonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A984781722E67DAB00AD674F /* Debug */,
+				A984781822E67DAB00AD674F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A98477E022E67D9F00AD674F /* Project object */;
+}

@@ -22,6 +22,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var upButtonView:         UIView!
     @IBOutlet weak var areaSlideToUpView:    UIView!
     
+    @IBOutlet weak var rightArrowOneImageView: UIImageView!
+    @IBOutlet weak var rightArrowTwoImageView: UIImageView!
+    @IBOutlet weak var rightArrowThreeImageView: UIImageView!
+    
+    @IBOutlet weak var downArrowOneImageView: UIImageView!
+    @IBOutlet weak var downArrowTwoImageView: UIImageView!
+    @IBOutlet weak var downArrowThreeImageView: UIImageView!
+    
+    @IBOutlet weak var leftArrowOneImageView: UIImageView!
+    @IBOutlet weak var leftArrowTwoImageView: UIImageView!
+    @IBOutlet weak var leftArrowThreeImageView: UIImageView!
+    
+    @IBOutlet weak var upArrowOneImageView: UIImageView!
+    @IBOutlet weak var upArrowTwoImageView: UIImageView!
+    @IBOutlet weak var upArrowThreeImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +50,22 @@ class ViewController: UIViewController {
         areaSlideToDownView.backgroundColor = .clear
         areaSlideToLeftView.backgroundColor = .clear
         areaSlideToUpView.backgroundColor = .clear
+        
+        rightArrowOneImageView.makeACircle()
+        rightArrowTwoImageView.makeACircle()
+        rightArrowThreeImageView.makeACircle()
+        
+        downArrowOneImageView.makeACircle()
+        downArrowTwoImageView.makeACircle()
+        downArrowThreeImageView.makeACircle()
+        
+        leftArrowOneImageView.makeACircle()
+        leftArrowTwoImageView.makeACircle()
+        leftArrowThreeImageView.makeACircle()
+        
+        upArrowOneImageView.makeACircle()
+        upArrowTwoImageView.makeACircle()
+        upArrowThreeImageView.makeACircle()
     }
     
     func movementsButtons(){
@@ -187,3 +219,11 @@ class ViewController: UIViewController {
     }
 }
 
+
+extension UIView{
+    
+    func makeACircle(){
+        self.clipsToBounds = true
+        self.layer.cornerRadius = self.layer.bounds.size.height/2
+    }
+}

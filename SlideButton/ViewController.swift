@@ -38,6 +38,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var upArrowTwoImageView: UIImageView!
     @IBOutlet weak var upArrowThreeImageView: UIImageView!
     
+    @IBOutlet weak var rightWhiteImageView: UIImageView!
+    @IBOutlet weak var rightGrayImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,6 +69,11 @@ class ViewController: UIViewController {
         upArrowOneImageView.makeACircle()
         upArrowTwoImageView.makeACircle()
         upArrowThreeImageView.makeACircle()
+        
+        rightWhiteImageView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
+        rightGrayImageView.roundCornersWithBorder(borderWhite: false, isContainerHorizontal: false)
+        areaSlideToRightView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: true)
+        
     }
     
     func movementsButtons(){
@@ -211,8 +219,6 @@ class ViewController: UIViewController {
                     
                 })
             }
-            
-            
         default:
             ()
         }
@@ -225,5 +231,22 @@ extension UIView{
     func makeACircle(){
         self.clipsToBounds = true
         self.layer.cornerRadius = self.layer.bounds.size.height/2
+    }
+    
+    func roundCornersWithBorder(borderWhite: Bool , isContainerHorizontal: Bool){
+        self.clipsToBounds = true
+        if (isContainerHorizontal){
+            self.layer.cornerRadius = self.layer.bounds.size.height/2
+        }
+        else{
+            self.layer.cornerRadius = self.layer.bounds.size.width/2
+        }
+        self.layer.borderWidth = 2
+        if (borderWhite){
+            self.layer.borderColor = UIColor.white.cgColor
+        }
+        else{
+            self.layer.borderColor = UIColor.lightGray.cgColor
+        }
     }
 }

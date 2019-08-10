@@ -41,6 +41,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var rightWhiteImageView: UIImageView!
     @IBOutlet weak var rightGrayImageView: UIImageView!
     
+    @IBOutlet weak var downWhiteImageView: UIImageView!
+    @IBOutlet weak var downGrayImageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,6 +76,10 @@ class ViewController: UIViewController {
         rightWhiteImageView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
         rightGrayImageView.roundCornersWithBorder(borderWhite: false, isContainerHorizontal: false)
         areaSlideToRightView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: true)
+        
+        downWhiteImageView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
+        downGrayImageView.roundCornersWithBorder(borderWhite: false, isContainerHorizontal: false)
+        areaSlideToDownView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
         
     }
     

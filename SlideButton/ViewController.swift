@@ -61,9 +61,9 @@ class ViewController: UIViewController {
     func settingScreen(){
         
         areaSlideToRightView.backgroundColor = .clear
-        areaSlideToDownView.backgroundColor = .clear
-        areaSlideToLeftView.backgroundColor = .clear
-        areaSlideToUpView.backgroundColor = .clear
+        areaSlideToDownView.backgroundColor  = .clear
+        areaSlideToLeftView.backgroundColor  = .clear
+        areaSlideToUpView.backgroundColor    = .clear
         
         rightArrowOneImageView.makeACircle()
         rightArrowTwoImageView.makeACircle()
@@ -81,21 +81,21 @@ class ViewController: UIViewController {
         upArrowTwoImageView.makeACircle()
         upArrowThreeImageView.makeACircle()
         
-        rightWhiteImageView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
-        rightGrayImageView.roundCornersWithBorder(borderWhite: false, isContainerHorizontal: false)
-        areaSlideToRightView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: true)
+        rightWhiteImageView.roundCornersWithBorder(borderWhite:  true,  isContainerHorizontal: false)
+        rightGrayImageView.roundCornersWithBorder(borderWhite:   false, isContainerHorizontal: false)
+        areaSlideToRightView.roundCornersWithBorder(borderWhite: true,  isContainerHorizontal: true)
         
-        downWhiteImageView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
-        downGrayImageView.roundCornersWithBorder(borderWhite: false, isContainerHorizontal: false)
-        areaSlideToDownView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
+        downWhiteImageView.roundCornersWithBorder(borderWhite:  true,  isContainerHorizontal: false)
+        downGrayImageView.roundCornersWithBorder(borderWhite:   false, isContainerHorizontal: false)
+        areaSlideToDownView.roundCornersWithBorder(borderWhite: true,  isContainerHorizontal: false)
         
-        leftWhiteImageView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
-        leftGrayImageView.roundCornersWithBorder(borderWhite: false, isContainerHorizontal: false)
-        areaSlideToLeftView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: true)
+        leftWhiteImageView.roundCornersWithBorder(borderWhite:  true,  isContainerHorizontal: false)
+        leftGrayImageView.roundCornersWithBorder(borderWhite:   false, isContainerHorizontal: false)
+        areaSlideToLeftView.roundCornersWithBorder(borderWhite: true,  isContainerHorizontal: true)
         
-        upWhiteImageView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
-        upGrayImageView.roundCornersWithBorder(borderWhite: false, isContainerHorizontal: false)
-        areaSlideToUpView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
+        upWhiteImageView.roundCornersWithBorder(borderWhite:  true,  isContainerHorizontal: false)
+        upGrayImageView.roundCornersWithBorder(borderWhite:   false, isContainerHorizontal: false)
+        areaSlideToUpView.roundCornersWithBorder(borderWhite: true,  isContainerHorizontal: false)
         
         
         //hideElemts(isNeedToHide: true)
@@ -103,8 +103,8 @@ class ViewController: UIViewController {
     
     func hideElemts(isNeedToHide: Bool){
         
-        rightArrowOneImageView.isHidden = isNeedToHide
-        rightArrowTwoImageView.isHidden = isNeedToHide
+        rightArrowOneImageView.isHidden   = isNeedToHide
+        rightArrowTwoImageView.isHidden   = isNeedToHide
         rightArrowThreeImageView.isHidden = isNeedToHide
         
     }
@@ -113,6 +113,7 @@ class ViewController: UIViewController {
         
         rightButtonView.isUserInteractionEnabled = true
         rightButtonView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleRightPanMoveView(recognizer:))))
+        
         
         downButtonView.isUserInteractionEnabled = true
         downButtonView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleDownPanMoveView(recognizer:))))
@@ -128,20 +129,20 @@ class ViewController: UIViewController {
         //  72. x: areaSlideToRightView.layer.bounds.size.width-50 and y:0
         //  77. in: self.areaSlideToRightView).x / (CGFloat(self.areaSlideToRightView.layer.bounds.size.width)
         //  87. self.rightButtonView.transform = CGAffineTransform.identity
+        //
         
     }
     
-    @objc func handleRightPanMoveView(recognizer: UIPanGestureRecognizer) {
-        
+    func templeteGestureRecognizer(recognizer: UIPanGestureRecognizer, buttonView: UIView, translationX: CGFloat, translationY: CGFloat, transtationIn: CGFloat){
         switch recognizer.state {
         case .began:
             animator = UIViewPropertyAnimator(duration: 0.5, curve: .easeOut, animations: {
-                self.rightButtonView.transform = CGAffineTransform(translationX: CGFloat(self.areaSlideToRightView.layer.bounds.size.width-50) , y: 0)
+                buttonView.transform = CGAffineTransform(translationX: translationX, y: translationY)
             })
             animator.startAnimation()
             animator.pauseAnimation()
         case .changed:
-            animator.fractionComplete = recognizer.translation(in: self.areaSlideToRightView).x / (CGFloat(self.areaSlideToRightView.layer.bounds.size.width))
+            animator.fractionComplete = transtationIn
         case .ended:
             if animator.fractionComplete > 0.80 {
                 animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
@@ -151,16 +152,49 @@ class ViewController: UIViewController {
             else {
                 animator.stopAnimation(true)
                 UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveLinear, animations: {
-                    self.rightButtonView.transform = CGAffineTransform.identity
+                    buttonView.transform = CGAffineTransform.identity
                 }, completion: { (completed) in
                     
                 })
             }
-            
-            
         default:
             ()
         }
+    }
+    
+    @objc func handleRightPanMoveView(recognizer: UIPanGestureRecognizer) {
+        
+        let x = CGFloat(self.areaSlideToRightView.layer.bounds.size.width-50)
+        let tranlationIn = recognizer.translation(in: self.areaSlideToRightView).x / (CGFloat(self.areaSlideToRightView.layer.bounds.size.width))
+        
+        templeteGestureRecognizer(recognizer: recognizer, buttonView: self.rightButtonView, translationX: x, translationY: 0, transtationIn: tranlationIn)
+        
+//        switch recognizer.state {
+//        case .began:
+//            animator = UIViewPropertyAnimator(duration: 0.5, curve: .easeOut, animations: {
+//                self.rightButtonView.transform = CGAffineTransform(translationX: CGFloat(self.areaSlideToRightView.layer.bounds.size.width-50) , y: 0)
+//            })
+//            animator.startAnimation()
+//            animator.pauseAnimation()
+//        case .changed:
+//            animator.fractionComplete = recognizer.translation(in: self.areaSlideToRightView).x / (CGFloat(self.areaSlideToRightView.layer.bounds.size.width))
+//        case .ended:
+//            if animator.fractionComplete > 0.80 {
+//                animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
+//                let s = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "test") as! Test
+//                navigationController?.pushViewController(s, animated: true)
+//            }
+//            else {
+//                animator.stopAnimation(true)
+//                UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveLinear, animations: {
+//                    self.rightButtonView.transform = CGAffineTransform.identity
+//                }, completion: { (completed) in
+//
+//                })
+//            }
+//        default:
+//            ()
+//        }
     }
 
     @objc func handleDownPanMoveView(recognizer: UIPanGestureRecognizer) {
@@ -258,7 +292,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func rightActionButton(_ sender: UIButton) {
-        
         hideElemts(isNeedToHide: false)
     }
     @IBAction func downActionButton(_ sender: UIButton) {

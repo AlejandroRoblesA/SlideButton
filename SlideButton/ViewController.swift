@@ -22,27 +22,34 @@ class ViewController: UIViewController {
     @IBOutlet weak var upButtonView:         UIView!
     @IBOutlet weak var areaSlideToUpView:    UIView!
     
-    @IBOutlet weak var rightArrowOneImageView: UIImageView!
-    @IBOutlet weak var rightArrowTwoImageView: UIImageView!
+    @IBOutlet weak var rightArrowOneImageView:   UIImageView!
+    @IBOutlet weak var rightArrowTwoImageView:   UIImageView!
     @IBOutlet weak var rightArrowThreeImageView: UIImageView!
     
-    @IBOutlet weak var downArrowOneImageView: UIImageView!
-    @IBOutlet weak var downArrowTwoImageView: UIImageView!
+    @IBOutlet weak var downArrowOneImageView:   UIImageView!
+    @IBOutlet weak var downArrowTwoImageView:   UIImageView!
     @IBOutlet weak var downArrowThreeImageView: UIImageView!
     
-    @IBOutlet weak var leftArrowOneImageView: UIImageView!
-    @IBOutlet weak var leftArrowTwoImageView: UIImageView!
+    @IBOutlet weak var leftArrowOneImageView:   UIImageView!
+    @IBOutlet weak var leftArrowTwoImageView:   UIImageView!
     @IBOutlet weak var leftArrowThreeImageView: UIImageView!
     
-    @IBOutlet weak var upArrowOneImageView: UIImageView!
-    @IBOutlet weak var upArrowTwoImageView: UIImageView!
+    @IBOutlet weak var upArrowOneImageView:   UIImageView!
+    @IBOutlet weak var upArrowTwoImageView:   UIImageView!
     @IBOutlet weak var upArrowThreeImageView: UIImageView!
     
     @IBOutlet weak var rightWhiteImageView: UIImageView!
-    @IBOutlet weak var rightGrayImageView: UIImageView!
+    @IBOutlet weak var rightGrayImageView:  UIImageView!
     
     @IBOutlet weak var downWhiteImageView: UIImageView!
-    @IBOutlet weak var downGrayImageView: UIImageView!
+    @IBOutlet weak var downGrayImageView:  UIImageView!
+    
+    @IBOutlet weak var leftWhiteImageView: UIImageView!
+    @IBOutlet weak var leftGrayImageView:  UIImageView!
+    
+    @IBOutlet weak var upWhiteImageView: UIImageView!
+    @IBOutlet weak var upGrayImageView:  UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +59,7 @@ class ViewController: UIViewController {
     }
     
     func settingScreen(){
+        
         areaSlideToRightView.backgroundColor = .clear
         areaSlideToDownView.backgroundColor = .clear
         areaSlideToLeftView.backgroundColor = .clear
@@ -80,6 +88,24 @@ class ViewController: UIViewController {
         downWhiteImageView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
         downGrayImageView.roundCornersWithBorder(borderWhite: false, isContainerHorizontal: false)
         areaSlideToDownView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
+        
+        leftWhiteImageView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
+        leftGrayImageView.roundCornersWithBorder(borderWhite: false, isContainerHorizontal: false)
+        areaSlideToLeftView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: true)
+        
+        upWhiteImageView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
+        upGrayImageView.roundCornersWithBorder(borderWhite: false, isContainerHorizontal: false)
+        areaSlideToUpView.roundCornersWithBorder(borderWhite: true, isContainerHorizontal: false)
+        
+        
+        //hideElemts(isNeedToHide: true)
+    }
+    
+    func hideElemts(isNeedToHide: Bool){
+        
+        rightArrowOneImageView.isHidden = isNeedToHide
+        rightArrowTwoImageView.isHidden = isNeedToHide
+        rightArrowThreeImageView.isHidden = isNeedToHide
         
     }
     
@@ -120,7 +146,7 @@ class ViewController: UIViewController {
             if animator.fractionComplete > 0.80 {
                 animator.continueAnimation(withTimingParameters: nil, durationFactor: 0)
                 let s = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "test") as! Test
-                self.present(s, animated: true)
+                navigationController?.pushViewController(s, animated: true)
             }
             else {
                 animator.stopAnimation(true)
@@ -230,6 +256,21 @@ class ViewController: UIViewController {
             ()
         }
     }
+    
+    @IBAction func rightActionButton(_ sender: UIButton) {
+        
+        hideElemts(isNeedToHide: false)
+    }
+    @IBAction func downActionButton(_ sender: UIButton) {
+        hideElemts(isNeedToHide: false)
+    }
+    @IBAction func leftActionButton(_ sender: UIButton) {
+        hideElemts(isNeedToHide: false)
+    }
+    @IBAction func upActionButton(_ sender: UIButton) {
+        hideElemts(isNeedToHide: false)
+    }
+    
 }
 
 
